@@ -1,0 +1,11 @@
+services:
+  postgres:
+    image: 'postgres:latest'
+    volumes:
+      - ~/volumes/hicham/postgresql/:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=airbnb
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_USER=postgres
+    ports:
+      - "5432:5432"
